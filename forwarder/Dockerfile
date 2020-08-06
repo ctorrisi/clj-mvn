@@ -19,6 +19,8 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
+RUN chown -R fluent:fluent /usr/local/lib/ruby/gems/2.6.0/gems/fluent-plugin-splunk-hec-*
+
 COPY entrypoint.sh /bin/
 
 USER fluent
