@@ -53,6 +53,8 @@ RUN groupadd -r fluent && useradd -r -g fluent fluent \
 
 COPY entrypoint.sh /bin/
 
+COPY plugins/* /etc/fluent/plugin/
+
 ENV FLUENTD_CONF="fluent.conf"
 
 ENV LD_PRELOAD="/usr/lib/libjemalloc.so.2"
