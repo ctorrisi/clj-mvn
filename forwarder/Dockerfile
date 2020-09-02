@@ -25,6 +25,7 @@ RUN apt-get update \
                 fluent-plugin-rewrite-tag-filter \
                 fluent-plugin-splunk-hec \
                 fluent-plugin-prometheus \
+                fluent-plugin-s3 \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch" \
  && wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch.asc" \
