@@ -20,7 +20,7 @@ RUN apt-get update \
  && gem install json -v 2.3.0 \
  && gem install async-http -v 0.50.7 \
  && gem install ext_monitor -v 0.1.2 \
- && gem install fluentd -v 1.11.2 \
+ && gem install fluentd -v 1.11.3 \
  && gem install fluent-plugin-grafana-loki \
                 fluent-plugin-rewrite-tag-filter \
                 fluent-plugin-splunk-hec \
