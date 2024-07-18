@@ -8,7 +8,7 @@ RUN echo '%wheel ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/wheel && \
 
 RUN systemctl enable sshd chronyd ModemManager NetworkManager auditd irqbalance polkit postfix cron dbus systemd-journald systemd-logind
 
-ENTRYPOINT ["/usr/lib/systemd/systemd"]
+CMD ["--system"]
 
-CMD ["--switched-root", "--system", "--deserialize=44"]
+ENTRYPOINT ["/usr/lib/systemd/systemd"]
 
