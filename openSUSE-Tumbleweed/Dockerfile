@@ -10,5 +10,5 @@ RUN systemctl enable sshd chronyd ModemManager NetworkManager auditd irqbalance 
 
 ENTRYPOINT ["/usr/lib/systemd/systemd"]
 
-CMD ["--switched-root", "--system", "--deserialize=44", "--system"]
+CMD ["--switched-root", "--system", "--deserialize=44"]
 
