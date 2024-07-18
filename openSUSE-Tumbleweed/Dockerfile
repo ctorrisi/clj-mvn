@@ -10,5 +10,5 @@ RUN systemctl enable sshd chronyd ModemManager NetworkManager auditd irqbalance 
 
 CMD ["/usr/lib/systemd/systemd --switched-root --system --deserialize=4"]
 
-ENTRYPOINT ["/bin/bash", "-c", "systemctl start sshd chronyd ModemManager NetworkManager auditd irqbalance polkit postfix cronie dbus systemd-journald systemd-logind systemd-udevd && exec /usr/lib/systemd/systemd --switched-root --system --deserialize=4"]
+ENTRYPOINT ["/bin/bash", "-c", "systemctl start sshd chronyd ModemManager NetworkManager auditd irqbalance polkit postfix cron systemd-journald systemd-logind systemd-udevd && exec /usr/lib/systemd/systemd --switched-root --system --deserialize=4"]
 
